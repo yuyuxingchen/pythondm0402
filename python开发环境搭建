@@ -1,1 +1,7 @@
+　1.准备好安装包
 
+　　1）上python官网下载python运行环境（https://www.python.org/downloads/），目前比较稳定的是python-3.5.2
+
+　　2）上pycharm官网下载最新版的IDE（http://www.jetbrains.com/pycharm/download/#section=windows），官网提供了mac、windows和linux三种版本，我下的是pycharm-community-2016.2.3.exe
+
+　　3）上postgresql官司网下载最新版的数据库（https://www.postgresql.org/download/windows/  打开页面后，点击Download the installer进入下载页，然后选择版本和操作系统，再点击下载），我下的是postgresql-9.6.5-1-windows-x64.exe
