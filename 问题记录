@@ -1,2 +1,7 @@
 1.This inspection detects names that should resolve but don't. Due to dynamic.......
 #有可能是导入的.py的文件名不对。
+2.pycharm上python和unittest两种姿势。
+问题描述：明明代码一样，为什么别人的能出结果，我的不能出结果。
+问题分析：先检查代码，确保代码一样的前提下，应该就是运行姿势不对，一旦导入unittest模块，pycharm会自动识别以unittest的姿势去运行了。
+unittest运行单个用例，可以只运行类里面的单个方法，python是直接运行模式。
+解决办法：点击选择运行文件的按钮，选择：Edit Configurations,展开python和python tests 两个选项，会发现刚才运行的脚本名称在python tests的选项下，也就是pycharm这个工具自动默认为unittest姿势运行了，只需要选择这个脚本名称，点击减号按钮，将其从python tests的选项下移除，加到python的选项下即可。
