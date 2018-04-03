@@ -1,16 +1,17 @@
-# /usr/bin/env python
-# coding=utf-8
+#-*- coding: utf-8 -*-
+class Isequal(object):
+    def __init__(self,guess,value):
+        self.guess = guess
+        self.value = value
 
 
-class Fa(object):
-    def gen(self, line):
-        for i in range(1,line+1):
-            for j in range(1,i+1):
-                print('%d*%d=%d  ' % (j,i,j*i),end="")
-            print(end='\n')
+    def isequal(self):
+        if self.value < self.guess:
+            print('is too big!')
+        elif self.value > self.guess:
+            print('is too small!')
+        else:
+            print('you are right!')
 
 if __name__ == '__main__':
-    fa = Fa()
-    fa.gen(9)
-
-
+    Isequal(int(2),int(4)).isequal()
