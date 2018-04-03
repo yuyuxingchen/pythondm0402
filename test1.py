@@ -9,3 +9,6 @@ class Fa(object):
 if __name__ == '__main__':
     fa = Fa()
     fa.gen(9)
+
+
+
