@@ -1,0 +1,1 @@
+1.urlopen()返回的对象，可以使用read()进行读取，同样也可以使用geturl()方法、info()方法、getcode()方法。
