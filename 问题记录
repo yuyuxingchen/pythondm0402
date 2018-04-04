@@ -9,3 +9,7 @@ unittest运行单个用例，可以只运行类里面的单个方法，python是
 问题描述：python3.6中出现错误：AttributeError: module 'urllib' has no attribute 'urlopen'
 问题分析：原因是python3.x中应该用urllib.request
 解决办法：将urllib改成urllib.request
+4.问题描述：当前环境win10，python_3.6.1，64位。 在windows下，在dos中运行pip install Scrapy报错：
+building 'twisted.test.raiser' extension
+error: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C++ Build Tools": http://landinghub.visualstudio.com/visual-cpp-build-tools
+解决办法：http://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted 下载twisted对应版本的whl文件（如我的Twisted‑17.5.0‑cp36‑cp36m‑win_amd64.whl），cp后面是python版本，amd64代表64位，运行命令：pip install C:\Users\CR\Downloads\Twisted-17.5.0-cp36-cp36m-win_amd64.whl
