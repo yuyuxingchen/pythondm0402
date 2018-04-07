@@ -30,3 +30,5 @@ csvt_re = re.compile(r'csvt',re.I)
     email = r'\w{3}@\w+(\.com|\.cn)' 其中的小括号用来分组。当有分组时，会优先返回分组当中的数据。
     >>> re.findall(email,'qwe@qq.com')
     ['.com']
+
+
