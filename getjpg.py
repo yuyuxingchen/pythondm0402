@@ -1,44 +1,28 @@
-# # -*- coding: UTF-8 -*-
-# from urllib import request
-# import re
-# def getHtml(url):
-#     page = request.urlopen(url)
-#     html = page.read().decode(encoding='utf-8',errors='strict')
-#     return html
-#
-# def getjpg(html):
-#      rs = r'src=(http.*?\.jpg)'
-#      imgre = re.compile(rs)
-#      jpg = re.findall(imgre,str(html))
-#     # return jpg
-#      x = 0
-#      for imgurl in jpg:
-#         request.urlretrieve(imgurl,'%s.jpg' % x)
-#         x+=1
-#
-# # html = getHtml("https://image.baidu.com/")
-# # lines = getjpg(html)
-# # file = open('a','w')
-# # file.write(str(lines))
-# print(getHtml("https://image.baidu.com/"))
-
 # -*- coding: utf-8 -*-
 import urllib.request
 import re
-url='https://tieba.baidu.com/index.html?traceid='
+url='https://tieba.baidu.com/index.html?traceid'
 
 def getHtml(url):
     page = urllib.request.urlopen(url)
     html = page.read().decode(encoding='UTF-8',errors='strict')
     return html
-def getjpg(html):
-      rs = r'src="http.*?\.jpg"'
-      imgre = re.compile(rs)
-      jpg = re.findall(imgre,str(html))
-      return jpg
 
-h = getjpg(getHtml(url))
-file = open('fa.py', 'w')
-file.write(str(h))
-#     return html
-# print(getHtml(url))
+def getjpg(html):
+    rs = r'src="(https://[A-Z0-9a-z\s\%\.\_\/-=]*?\.jpg)"'
+    imgre = re.compile(rs, flags=0)
+    jpg = re.findall(imgre,html)
+    return jpg
+def jpg_to_a(jpg):
+ #    with open('a', 'w+', encoding='utf-8', errors='strict') as f:
+        text = []
+        for i in range(20):
+            comment=jpg[i]
+            text.append(comment)
+            #f.write(str(text))
+        print(text)
+html = getHtml(url)
+jpg = getjpg(html)
+jpg_to_a(jpg)
+
+

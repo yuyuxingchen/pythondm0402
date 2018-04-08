@@ -15,3 +15,5 @@ error: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C++ 
 解决办法：http://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted 下载twisted对应版本的whl文件（如我的Twisted‑17.5.0‑cp36‑cp36m‑win_amd64.whl），cp后面是python版本，amd64代表64位，运行命令：pip install C:\Users\CR\Downloads\Twisted-17.5.0-cp36-cp36m-win_amd64.whl
 
 <img src="https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=37c0f1fc3501213fd03348dc64e636f8/fc1f4134970a304e9fcf65dfddc8a786c9175c22.jpg" width="357.0407345017875" height="238.3640666761167">
+5.在运行爬虫代码时，出现TypeError: cannot use a string pattern on a bytes-like object错误。
+解决办法：加上decode(encoding='UTF-8',errors='strict') 例如： html = page.read().decode(encoding='UTF-8',errors='strict')
